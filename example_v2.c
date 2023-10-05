@@ -111,6 +111,9 @@ int main(int rgc, char *argv[])
   // Communication schedules can be taken into account at this moment.
   MPI_Wait(&topo_request, MPI_STATUS_IGNORE);
   //after MPI_Wait returns/completes, the communicator handle can be fully used.
+  //Do we want to authorize other non-scheduled ops on the communicator.
+  //If not, only non-blocking/immediate and/or persistent communication operations
+  //can be supported?
   
 
   MPI_Start(&bcast_request);
