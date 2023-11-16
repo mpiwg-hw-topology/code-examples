@@ -66,7 +66,7 @@ int main(int rgc, char *argv[])
   int recv_buffer = 0;
   
   MPI_Addr_register(&send_buffer,send_request);
-  MPI_Addr_register(&recv_buffer,send_request);
+  MPI_Addr_register(&recv_buffer,recv_request);
   
   MPI_Start(&send_request);
   MPI_Start(&recv_request);
